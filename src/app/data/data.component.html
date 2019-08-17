@@ -1,7 +1,6 @@
 
 
 <section class="header">
-  <button (click)='sortName()'><Sender</button>
   <button>Message Date</button>
   <button>Text</button>
   <h4>Read Date</h4>
@@ -21,18 +20,18 @@
   <button (click) = 'countHots("mikeryan")'>counRyan</button>
   <button (click) = 'countHots("blake")'>countBlake</button>
   <button (click) = 'countHots("")'>countphil</button>
-  <button (click) = 'countAllHots()'>Count All Texts</button>
+  <button (click) = 'countAllHots()'>Count Total of Texts</button>
   <h3>maxCount: {{maxwellHotsCount$}}</h3>
   <h3>monkeyCount: {{greesemonkeyHotsCount$}}</h3>
   <h3>mikeyCount: {{mikeryanHotsCount$}}</h3>
   <h3>blakeCount: {{blakeHotsCount$}}</h3>
   <h3>philCount: {{HotsCount$}}</h3>
 
-  <div *ngFor="let data of data$;let i = index;">
-    <h4>{{data["Sender Name"]}} </h4>
-    <p>Date: {{data["Message Date"]}} </p>
-    <p>Message: {{data["Text"]}} </p>
+<!--  <div *ngFor="let data of data$;let i = index;">-->
+<!--    <h4>{{data["Sender Name"]}} </h4>-->
+<!--    <p>Date: {{data["Message Date"]}} </p>-->
+<!--    <p>Message: {{data["Text"]}} </p>-->
 
-  </div>
+<!--  </div>-->
   </section>
 <router-outlet></router-outlet>
