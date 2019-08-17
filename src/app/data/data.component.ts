@@ -28,6 +28,7 @@ export class DataComponent implements OnInit {
     this.blakeHotsCount$ = 0;
     this.HotsCount$ = 0;
     this.dates = [];
+    this.filteredData$ = [];
   }
 
   ngOnInit() {
@@ -40,8 +41,20 @@ export class DataComponent implements OnInit {
             text: m['Text']
           };
         });
-        console.log(this.filteredData$ );
     });
+  }
+
+
+  countAllHots() {
+    const allCounts = this.filteredData$.reduce((acc, message) => {
+      if (acc[message.sender]) {
+        acc[message.sender]++;
+      } else {
+        acc[message.sender] = 1;
+      }
+      return acc;
+    }, {});
+    console.log(allCounts);
   }
 
 
@@ -75,17 +88,6 @@ export class DataComponent implements OnInit {
   // }
 
 
-    // countAllHots() {
-    //   const allCounts = this.data$.reduce((acc, message) => {
-    //     if (acc[message.sender]) {
-    //       acc[message.sender]++;
-    //     } else {
-    //       acc[message.sender] = 1;
-    //     }
-    //     return acc;
-    //   }, {});
-    //   console.log(allCounts);
-    // }
   // this.dates = data.map(m => m['Message Date']
   //   .split(' ')
   //   .splice(0, 1));

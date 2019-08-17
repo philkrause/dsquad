@@ -1,4 +1,14 @@
-h1{
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Amatic+SC&display=swap');
+
+.header{
   display:flex;
   justify-content: center;
+  align-items:center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  height:6rem;
+  background-color:rgb(12,138,200);
+  color: white;
 }
+
+//font-family: 'Alegreya Sans SC', sans-serif;
