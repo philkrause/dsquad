@@ -13,7 +13,7 @@ import {DataService} from '../dataservice.service';
 })
 export class PiechartComponent implements OnInit {
 
-  title: 'yo momma';
+  title: 'Death Squad Analytics';
   LineChart: any;
   BarChart: any;
   PieChart: any;
@@ -25,7 +25,7 @@ export class PiechartComponent implements OnInit {
     this.PieChart = new Chart('pieChart', {
       type: 'pie',
       data: {
-        labels: ['Blink', 'Greese Monkey', 'Mtry1', 'PhilsOdyssey', 'Mr. Sparkle'],
+        labels: ['Blink(1103)', 'Greese Monkey(1620)', 'Mtry1(1436)', 'PhilsOdyssey(678)', 'Mr. Sparkle(2153)'],
         datasets: [{
           label: '# of Votes',
           data: [1103, 1620 , 1436, 678 , 2153],
@@ -48,7 +48,7 @@ export class PiechartComponent implements OnInit {
       },
       options: {
         title:{
-          text: 'Bar Chart',
+          text: 'TOTAL TEXT AMOUNTS',
           display: true
         },
         scales: {

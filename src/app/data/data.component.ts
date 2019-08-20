@@ -42,20 +42,21 @@ export class DataComponent implements OnInit {
           };
         });
     });
+    const countAllHots = () => {
+      const allCounts = this.data$.reduce((acc, message) => {
+        if (acc[message[`Sender Name`]]) {
+          acc[message[`Sender Name`]] ++
+        } else {
+          acc[message[`Sender Name`]] = 1;
+        }
+        return acc;
+      }, {});
+      console.log(allCounts);
+    }
   }
 
 
-  countAllHots() {
-    const allCounts = this.filteredData$.reduce((acc, message) => {
-      if (acc[message.sender]) {
-        acc[message.sender]++;
-      } else {
-        acc[message.sender] = 1;
-      }
-      return acc;
-    }, {});
-    console.log(allCounts);
-  }
+  
 
 
 
